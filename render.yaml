@@ -9,7 +9,7 @@ services:
     name: praktix
     runtime: docker
     plan: free
-    repo: https://github.com/davido15/praktix
+    repo: https://github.com/daviddornyoh9-spec/laravel
     branch: main
     healthCheckPath: /up
     envVars:
