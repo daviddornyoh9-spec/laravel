@@ -19,6 +19,15 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        //
+        if ($url = env('RENDER_EXTERNAL_URL')) {
+            config(['app.url' => $url]);
+        }
+
+        if ($databaseUrl = env('DATABASE_URL')) {
+            config([
+                'database.default' => 'pgsql',
+                'database.connections.pgsql.url' => $databaseUrl,
+            ]);
+        }
     }
 }

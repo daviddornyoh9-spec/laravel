@@ -9,8 +9,9 @@ class ProgramSeeder extends Seeder
 {
     public function run(): void
     {
-        Program::create([
-            'title' => 'Full Stack Development',
+        Program::firstOrCreate(
+            ['title' => 'Full Stack Development'],
+            [
             'category' => 'IT',
             'description' => 'Learn Laravel, React and APIs',
             'outcomes' => 'Build real applications',
@@ -18,10 +19,12 @@ class ProgramSeeder extends Seeder
             'price' => 200,
             'instructor' => 'John Doe',
             'certificate_included' => true,
-        ]);
+            ]
+        );
 
-        Program::create([
-            'title' => 'Digital Marketing',
+        Program::firstOrCreate(
+            ['title' => 'Digital Marketing'],
+            [
             'category' => 'Marketing',
             'description' => 'SEO, Ads, Social Media',
             'outcomes' => 'Become marketer',
@@ -29,6 +32,7 @@ class ProgramSeeder extends Seeder
             'price' => 100,
             'instructor' => 'Jane Smith',
             'certificate_included' => true,
-        ]);
+            ]
+        );
     }
 }
