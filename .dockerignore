@@ -21,5 +21,4 @@ tests
 .codex
 *.md
 !README.md
-Dockerfile
 .dockerignore

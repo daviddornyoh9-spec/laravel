@@ -9,6 +9,8 @@ services:
     name: praktix
     runtime: docker
     plan: free
+    repo: https://github.com/davido15/praktix
+    branch: main
     healthCheckPath: /up
     envVars:
       - key: APP_ENV
