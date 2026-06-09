@@ -31,6 +31,12 @@ services:
         fromDatabase:
           name: praktix-db
           property: connectionString
+      - key: DATABASE_URL
+        fromDatabase:
+          name: praktix-db
+          property: connectionString
+      - key: DB_SSLMODE
+        value: require
       - key: SESSION_DRIVER
         value: database
       - key: CACHE_STORE
@@ -39,3 +45,7 @@ services:
         value: database
       - key: FILESYSTEM_DISK
         value: local
+      - key: SESSION_SECURE_COOKIE
+        value: true
+      - key: SESSION_SAME_SITE
+        value: lax
